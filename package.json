@@ -1,0 +1,29 @@
+{
+  "name": "family",
+  "version": "1.0.0",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "child_process": "^1.0.2",
+    "express": "^4.13.4",
+    "md5": "^2.2.1",
+    "mysql": "^2.10.2"
+  },
+  "description": "family app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeevavighnesh/family.git"
+  },
+  "keywords": [
+    "family"
+  ],
+  "author": "Vighnesh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeevavighnesh/family/issues"
+  },
+  "homepage": "https://github.com/jeevavighnesh/family#readme"
+}
