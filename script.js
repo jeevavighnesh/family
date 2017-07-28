@@ -96,7 +96,7 @@ app.post('/login', function(req, resp){
 app.post('/gitChanges', function(req, resp){
 	console.log(req.body.pusher.name + " pushed to " + req.body.repository.name);
   console.log("Pulling from GitHub " + req.body.repository.name + " repository");
-  exec('echo "$(date): ' + req.body.pusher.name + ' pushed to ' + req.body.repository.name  + '" >> ../family_logs/info.log', exeCallback);
+  exec('echo "$(date) INFO: ' + req.body.pusher.name + ' pushed to ' + req.body.repository.name  + '" >> ../family_logs/info.log', exeCallback);
   exec('git -C ~/Documents/family reset --hard', exeCallback);
   exec('git -C ~/Documents/family clean -df', exeCallback);
   exec('git -C ~/Documents/family pull -f', exeCallback);
@@ -109,10 +109,10 @@ app.post('/gitChanges', function(req, resp){
 function exeCallback(err, stdout, stderr){
   if (stdout) {
     console.log(stdout);
-    exec('echo ($date)' + stdout + ' >> info.log', exeCallback);
+    exec('echo ($date) IOINFO: ' + stdout + ' >> ../family-app/info.log', exeCallback);
   }
   if (stderr) {
-    exec('echo ($date)' + stderr + ' >> error.log', exeCallback);
+    exec('echo ($date) IOERROR:' + stderr + ' >> ../family-app/error.log', exeCallback);
     console.log(stderr);
   }
 }
