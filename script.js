@@ -102,16 +102,17 @@ app.post('/gitChanges', function(req, resp){
   exec('git -C ~/Documents/family pull -f', exeCallback);
   exec('npm -C ~/Documents/family install --production', exeCallback);
   exec('sudo service rc.local restart', exeCallback);
+  exec('echo "$(date): $SECONDS" >> ../family_logs/info.log', exeCallback)
   resp.sendStatus(200);
 })
 
 function exeCallback(err, stdout, stderr){
   if (stdout) {
     console.log(stdout);
-    // exec('echo ($date)' + stdout + ' >> info.log', exeCallback);
+    exec('echo ($date)' + stdout + ' >> info.log', exeCallback);
   }
   if (stderr) {
-    // exec('echo ($date)' + stderr + ' >> error.log', exeCallback);
+    exec('echo ($date)' + stderr + ' >> error.log', exeCallback);
     console.log(stderr);
   }
 }
