@@ -10,7 +10,9 @@ var memberRoutes = require('./api/routes/memberRoute');
 
 var bloodGroupRoutes = require('./api/routes/bloodGroupRoute');
 
-var relationRoutes = require('./api/routes/relationRoute')
+var relationRoutes = require('./api/routes/relationRoute');
+
+var gitChangesListener = require('./api/routes/gitChangesRoute');
 
 app.use( bodyParser.json() );       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
@@ -24,6 +26,7 @@ connector.connection.connect(function (error) {
         console.log("Connected");
 });
 
+gitChangesListener(app);
 memberRoutes(app);
 bloodGroupRoutes(app);
 relationRoutes(app);
