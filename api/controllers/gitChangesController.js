@@ -10,9 +10,8 @@ module.exports = {
         exec('git -C ~/Documents/family reset --hard', exeCallback);
         exec('git -C ~/Documents/family clean -df', exeCallback);
         exec('git -C ~/Documents/family pull -f', exeCallback);
-        exec('npm -C ~/Documents/family install --production', exeCallback);
+        exec('npm -C ~/Documents/family install --production', exec('./restart_server.sh', exeCallback));
         // exec('', exeCallback)
-        exec('sudo ./restart_server.sh', exeCallback);
         resp.sendStatus(200);
     }
 };
