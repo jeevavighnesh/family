@@ -11,7 +11,7 @@ module.exports = {
                 resp.send(error);
             }
             else {
-              console.log("Hai");
+              console.log("Hello");
                 resp.send(rows);
             }
         })
