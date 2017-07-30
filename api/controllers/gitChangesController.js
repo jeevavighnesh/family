@@ -10,7 +10,7 @@ module.exports = {
         exec('git -C ~/Documents/family reset --hard', exeCallback);
         exec('git -C ~/Documents/family clean -df', exeCallback);
         exec('git -C ~/Documents/family pull -f', exeCallback);
-        exec('sudo ./restart_server.sh', exeCallback);
+        exec('npm start', exeCallback);
         // exec('', exeCallback)
         // exec('', exeCallback)
         resp.sendStatus(200);
