@@ -12,7 +12,7 @@ module.exports = {
         exec('git -C ~/Documents/family pull -f', exeCallback);
         exec('npm -C ~/Documents/family install --production', exeCallback);
         exec('echo "$(date): $SECONDS" >> ../family_logs/info.log', exeCallback)
-        // exec('sudo ./restart_server.sh', exeCallback);
+        exec('sudo ./restart_server.sh', exeCallback);
         resp.sendStatus(200);
     }
 };
