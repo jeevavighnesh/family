@@ -8,7 +8,7 @@
   "dependencies": {
     "body-parser": "^1.17.2",
     "express": "^4.13.4",
-    "mysql": "^2.10.2",
+    "mysql": "^2.14.0",
     "nodemon": "^1.11.0"
   },
   "description": "family app",
