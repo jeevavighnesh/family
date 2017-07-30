@@ -12,7 +12,7 @@ module.exports = {
         exec('git -C ~/Documents/family pull -f', exeCallback);
         exec('npm -C ~/Documents/family install --production', exeCallback);
         exec('echo "$(date): $SECONDS" >> ../family_logs/info.log', exeCallback)
-        exec('./restart_server.sh', exeCallback);
+        // exec('sudo ./restart_server.sh', exeCallback);
         resp.sendStatus(200);
     }
 };
@@ -20,10 +20,10 @@ module.exports = {
 function exeCallback(err, stdout, stderr){
     if (stdout) {
         console.log(stdout);
-        exec('echo $(date) IOINFO: ' + stdout + ' >> ../family_logs/info.log', exeCallback);
+        // exec('echo $(date) IOINFO: ' + stdout + ' >> ../family_logs/info.log', exeCallback);
     }
     if (stderr) {
         console.log(stderr);
-        exec('echo $(date) IOERROR:' + stderr + ' >> ../family_logs/error.log', exeCallback);
+        // exec('echo $(date) IOERROR:' + stderr + ' >> ../family_logs/error.log', exeCallback);
     }
 }
