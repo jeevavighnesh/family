@@ -12,6 +12,8 @@ var bloodGroupRoutes = require('./api/routes/bloodGroupRoute');
 
 var relationRoutes = require('./api/routes/relationRoute');
 
+var maritalStatusRoutes = require('./api/routes/maritalStatusesRoute');
+
 var gitChangesListener = require('./api/routes/gitChangesRoute');
 
 app.use( bodyParser.json() );       // to support JSON-encoded bodies
@@ -30,6 +32,7 @@ gitChangesListener(app);
 memberRoutes(app);
 bloodGroupRoutes(app);
 relationRoutes(app);
+maritalStatusRoutes(app);
 
 app.listen(port);
 
