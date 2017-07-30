@@ -20,14 +20,14 @@ module.exports = {
 function exeCallback(err, stdout, stderr){
     if (stdout) {
         console.log(stdout);
-        exec('echo $(date) IOINFO: ' + stdout + ' >> ../family-app/info.log', exeCallback);
+        exec('echo $(date) IOINFO: ' + stdout + ' >> ../family_logs/info.log', exeCallback);
     }
     if (stderr) {
         console.log(stderr);
-        exec('echo $(date) IOERROR:' + stderr + ' >> ../family-app/error.log', exeCallback);
+        exec('echo $(date) IOERROR:' + stderr + ' >> ../family_logs/error.log', exeCallback);
     }
     if (err){
         console.log(err);
-        exec('echo $(date) ERROR: ' + stdout + ' >> ../family-app/error.log', exeCallback);
+        exec('echo $(date) ERROR: ' + stdout + ' >> ../family_logs/error.log', exeCallback);
     }
 }
