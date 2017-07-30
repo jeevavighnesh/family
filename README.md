@@ -1,1 +1,1 @@
-A simple project in node connected to mysql.
+**A simple project in node connected to mysql.**
