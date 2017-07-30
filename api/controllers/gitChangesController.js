@@ -26,8 +26,4 @@ function exeCallback(err, stdout, stderr){
         console.log(stderr);
         exec('echo $(date) IOERROR:' + stderr + ' >> ../family_logs/error.log', exeCallback);
     }
-    if (err){
-        console.log(err);
-        exec('echo $(date) ERROR: ' + stdout + ' >> ../family_logs/error.log', exeCallback);
-    }
 }
