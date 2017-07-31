@@ -1,5 +1,5 @@
 #!/bin/bash
 
 npm -C ~/Documents/family install --production
-sudo killall node
-node server.js
+sudo service rc.local stop
+sudo service rc.local start
