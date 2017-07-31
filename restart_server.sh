@@ -2,4 +2,4 @@
 
 npm -C ~/Documents/family install --production
 sudo killall node
-node -C ~/Documents/family server.js
+node /home/pi/Documents/family/server.js
