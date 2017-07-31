@@ -18,6 +18,8 @@ var genderRoutes = require('./api/routes/genderRoute');
 
 var loginRoutes = require('./api/routes/loginRoute');
 
+var TestRoutes = require('./api/routes/TestRoute');
+
 var gitChangesListener = require('./api/routes/gitChangesRoute');
 
 app.use( bodyParser.json() );       // to support JSON-encoded bodies
@@ -39,6 +41,7 @@ relationRoutes(app);
 maritalStatusRoutes(app);
 genderRoutes(app);
 loginRoutes(app);
+TestRoutes(app);
 
 app.listen(port);
 
