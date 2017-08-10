@@ -6,6 +6,8 @@ var connector = require('./api/utils/DBConnectionSettings')
 
 var bodyParser = require('body-parser');
 
+var viewWaterLevelRoutes = require('./api/routes/viewWaterLevelRoute');
+
 var memberRoutes = require('./api/routes/memberRoute');
 
 var bloodGroupRoutes = require('./api/routes/bloodGroupRoute');
@@ -34,6 +36,7 @@ connector.connection.connect(function (error) {
         console.log("Connected");
 });
 
+viewWaterLevelRoutes(app);
 gitChangesListener(app);
 memberRoutes(app);
 bloodGroupRoutes(app);
