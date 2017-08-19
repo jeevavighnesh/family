@@ -1,17 +1,17 @@
 {
   "name": "family",
   "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./restart_server.sh"
+  },
   "dependencies": {
     "body-parser": "^1.17.2",
     "express": "^4.13.4",
-    "md5": "^2.2.1",
-    "mysql": "^2.10.2"
+    "mysql": "^2.14.0"
   },
   "description": "family app",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jeevavighnesh/family.git"
