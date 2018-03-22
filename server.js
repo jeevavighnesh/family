@@ -24,6 +24,10 @@ var TestRoutes = require('./api/routes/TestRoute');
 
 var gitChangesListener = require('./api/routes/gitChangesRoute');
 
+var setIsElephantPresentRoutes = require('./api/routes/setIsElephantPresentRoute');
+
+var getIsElephantPresentRoutes = require('./api/routes/getIsElephantPresentRoute');
+
 app.use( bodyParser.json() );       // to support JSON-encoded bodies
 app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
     extended: true
@@ -45,6 +49,8 @@ maritalStatusRoutes(app);
 genderRoutes(app);
 loginRoutes(app);
 TestRoutes(app);
+setIsElephantPresentRoutes(app);
+getIsElephantPresentRoutes(app);
 
 app.listen(port);
 
